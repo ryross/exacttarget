@@ -207,7 +207,7 @@ class EtClient extends EtBaseClass
         } else {
             $request->Properties = $this->getDefinitionOfObject($className);
         }
-        $request->Filter = self::soapCall($filter)
+        $request->Filter = self::soapCall($filter);
 
         $requestMsg                  = new EtRecallRequestMsg();
         $requestMsg->RetrieveRequest = $request;
